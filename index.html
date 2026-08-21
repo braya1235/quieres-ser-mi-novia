@@ -1,27 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/main.css"/>
-  <title>¿Quieres ser mi novia?</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Un Mensaje Especial para Ti</title>
+<style>
+:root{--g1:#e0c3fc;--g2:#8ec5fc;--pink:#ffdde1;--flap:#eeb7c2;--flap2:#fbe2e7;--seal:#cf425c;--text:#3a3a3a;--sign:#c91515;--dur:1.7s}*{box-sizing:border-box}html,body{margin:0;width:100%;min-height:100%;overflow:hidden}body{padding:20px;display:flex;justify-content:center;align-items:center;background:linear-gradient(135deg,var(--g1),var(--g2));font-family:Arial,sans-serif;user-select:none;-webkit-tap-highlight-color:transparent}.main{display:flex;flex-direction:column;align-items:center}h1{font-family:cursive;font-size:clamp(2.5rem,10vw,5rem);color:#f63afd93;text-shadow:3px 3px 10px #0004;text-align:center;margin:0 0 40px;line-height:1.1}.env{position:relative;width:320px;height:220px;cursor:pointer;filter:drop-shadow(0 20px 25px #0004);animation:beat 2.5s infinite}.env.open,.env.closing{animation:none}.envbase{position:absolute;inset:0;background:var(--pink);border-radius:15px;box-shadow:inset 0 0 30px #0002}.flap{position:absolute;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.4,0,.2,1)}.top{top:0;left:0;width:100%;height:55%;background:var(--flap2);clip-path:polygon(0 0,100% 0,50% 100%);border-radius:15px 15px 0 0;transform-origin:top;z-index:6}.left{top:0;left:0;width:52%;height:100%;background:var(--flap);clip-path:polygon(0 0,100% 50%,0 100%);border-radius:15px 0 0 15px;transform-origin:left;z-index:5}.right{top:0;right:0;width:52%;height:100%;background:var(--flap);clip-path:polygon(100% 0,0 50%,100% 100%);border-radius:0 15px 15px 0;transform-origin:right;z-index:5}.heart{position:absolute;top:50%;left:50%;width:30px;height:30px;background:var(--seal);transform:translate(-50%,-70%) rotate(45deg);z-index:10;transition:.5s}.heart:before,.heart:after{content:'';position:absolute;width:30px;height:30px;background:inherit;border-radius:50%}.heart:before{top:-15px}.heart:after{left:-15px}.card{position:fixed;top:50%;left:50%;width:320px;height:220px;transform:translate(-50%,-40%);opacity:0;z-index:1;pointer-events:none;background:#fdfbfb;border-radius:10px;padding:25px;box-shadow:0 15px 45px #0004}.open .card{animation:openCard var(--dur) .7s forwards cubic-bezier(.18,.89,.32,1.28);pointer-events:auto}.closing .card{animation:closeCard 1.2s forwards cubic-bezier(.6,-.28,.74,.05)}.open .top{transform:rotateX(180deg);z-index:0}.open .left{transform:rotateY(180deg);z-index:0}.open .right{transform:rotateY(-180deg);z-index:0}.open .heart{transform:translateY(-200px) scale(.5);opacity:0}.content{color:var(--text);font-family:cursive;width:100%;height:100%;overflow:auto;padding-right:10px}.date{display:block;text-align:right;font-size:1.1rem;font-family:serif;font-style:italic;color:#888;margin-bottom:20px}.greet{font-size:2.2rem;margin:0 0 15px}.bodytext{font-size:1.6rem;line-height:1.5;margin:0 0 20px}.sign{font-size:2.5rem;text-align:right;color:var(--sign);margin:0}.magic{position:fixed;font-size:var(--fs);pointer-events:none;opacity:0;animation:magic var(--dur2) ease-out forwards}@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}@keyframes openCard{0%{transform:translate(-50%,-40%);opacity:0}40%{transform:translate(-50%,-100%) scale(1.1);opacity:1}100%{transform:translate(-50%,-50%) scale(1.2);opacity:1;width:90vw;height:90vh;max-width:700px;max-height:900px}}@keyframes closeCard{0%{transform:translate(-50%,-50%) scale(1.2);opacity:1;width:90vw;height:90vh;max-width:700px;max-height:900px}60%{transform:translate(-50%,-100%) scale(1.1);opacity:1}100%{transform:translate(-50%,-40%);opacity:0;width:320px;height:220px}}@keyframes magic{0%{opacity:0;transform:translate(0,0) scale(.8)}25%{opacity:1;transform:translate(var(--xm),var(--ym)) scale(1.8) rotate(var(--rm))}100%{opacity:0;transform:translate(var(--xe),var(--ye)) scale(var(--se)) rotate(var(--re))}}@media(max-width:768px){body{padding:12px}.main{transform:translateY(-5vh)}h1{font-size:2.9rem;margin-bottom:35px}.env{width:280px;height:193px}.content{padding-right:4px}.greet{font-size:1.5rem}.bodytext{font-size:1.05rem;line-height:1.45}.sign{font-size:1.5rem;text-align:center}.mobile-open .card{top:15px!important;transform:translateX(-50%)!important;width:95vw!important;height:calc(100vh - 30px)!important;max-height:none!important}.card{padding:20px}}
+</style>
 </head>
-
 <body>
-  <div class="background-overlay"></div>
-  <div class="rosa">
-    <div class="contenedor">
-      <br />
-      <img src="./img/inicio.gif" class="imagen imagen-gif" id="imagen">
-      <h1 id="mensaje">¿Quieres ser mi novia?</h1>
-      <button class="boton" id="btnSi">Sí</button>
-      <button class="boton" id="btnNo">No</button>
-    </div>
-  </div>
-
-  <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-  <script language="javascript" type="text/javascript" src="./js/main.js"> </script>
-</body>
-
-</html>
+<main class="main"><h1>Un Mensaje Especial para Ti</h1><div class="env"><div class="envbase"></div><div class="flap top"></div><div class="flap right"></div><div class="flap left"></div><div class="heart"></div><div class="card"><div class="content"><span class="date">Donde el tiempo no existe</span><p class="greet">Mi estrella guía,</p><p class="bodytext">Hay universos enteros en tus ojos, y he tenido la suerte de perderme en ellos. No eres un capítulo en mi historia, eres el libro entero.</p><p class="bodytext">Gracias por ser mi calma en medio del caos, y mi más bonita casualidad.</p><p class="sign">Con amor infinito,<br>greysi</p></div></div></div></main>
+<audio id="sound" src="https://dl.dropboxusercontent.com/scl/fi/esct592hxwzjyf9a2egpc/Si-supieras-lo-que-siento-con-mirarte....mp3?rlkey=xqbaohnpyd7b3mejkvvdg6dlq&st=2vagx61x&dl=1" preload="auto"></audio>
+<script>const env=document.querySelector('.env'),audio=document.getElementById('sound');let open=false,busy=false;env.addEventListener('click',e=>{if(busy)return;if(!open){busy=true;open=true;env.classList.add('open');document.body.classList.add('mobile-open');audio.play().catch(()=>{});setTimeout(()=>{busy=false;hearts()},1700)}else close()});document.addEventListener('click',e=>{if(open&&!e.target.closest('.env'))close()});function close(){if(busy)return;busy=true;env.classList.add('closing');document.body.classList.remove('mobile-open');audio.pause();audio.currentTime=0;setTimeout(()=>{env.classList.remove('open','closing');open=false;busy=false},1200)}function hearts(){if(!open)return;const icons=['❤️','💖','💕','✨','💜','💙','💚'],r=env.getBoundingClientRect(),sx=r.left+r.width/2,sy=r.top+r.height/2;for(let i=0;i<30;i++)setTimeout(()=>{if(!open)return;let x=document.createElement('div');x.className='magic';x.textContent=icons[i%icons.length];x.style.left=sx+'px';x.style.top=sy+'px';let d=Math.random()*2+3;x.style.setProperty('--dur2',d+'s');x.style.setProperty('--fs',Math.random()*15+15+'px');x.style.setProperty('--xe',(Math.random()-.5)*innerWidth*1.2+'px');x.style.setProperty('--ye',(Math.random()-.5)*innerHeight*1.2+'px');x.style.setProperty('--se',Math.random()*.5+.25);x.style.setProperty('--re',(Math.random()-.5)*720+'deg');x.style.setProperty('--xm',(Math.random()-.5)*200+'px');x.style.setProperty('--ym',(Math.random()-.5)*200+'px');x.style.setProperty('--rm',(Math.random()-.5)*360+'deg');document.body.appendChild(x);setTimeout(()=>x.remove(),d*1000)},i*50)}</script>
+</body></html>
